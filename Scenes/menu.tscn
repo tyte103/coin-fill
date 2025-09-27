@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvipg3hq1ye35"]
+[gd_scene load_steps=3 format=3 uid="uid://d1unv1jqi8hkw"]
 
 [sub_resource type="Gradient" id="Gradient_u4yt8"]
 offsets = PackedFloat32Array(0, 0.84)
@@ -15,6 +15,12 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+texture = SubResource("GradientTexture1D_1rerr")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
@@ -25,9 +31,10 @@ offset_bottom = -0.00012207031
 
 [node name="Button" type="Button" parent="Control/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_right = 1080.0
-offset_bottom = 1920.0
-texture = SubResource("GradientTexture1D_1rerr")
+[node name="Button2" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
