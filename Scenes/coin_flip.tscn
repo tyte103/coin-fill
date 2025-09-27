@@ -25,10 +25,10 @@ height = 0.05
 script = ExtResource("1_o5lmg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.17641479, 0.98431593, 0, -0.98431593, -0.17641479, 0, 2.9693575, 15.589666)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.272521, 23.10085)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.98240155, 0.18678123, 0, -0.18678123, 0.98240155, 0, 1.9005117, 3.3021243)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.039031, -0.07133758)
 
 [node name="GroundMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_a187i")
