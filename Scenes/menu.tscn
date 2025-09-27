@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1unv1jqi8hkw"]
+[gd_scene load_steps=5 format=3 uid="uid://bvipg3hq1ye35"]
+
+[ext_resource type="Script" uid="uid://bx7yqvf72ccxj" path="res://Scenes/throw_button.gd" id="1_1rerr"]
 
 [sub_resource type="Gradient" id="Gradient_u4yt8"]
 offsets = PackedFloat32Array(0, 0.84)
@@ -6,6 +8,9 @@ colors = PackedColorArray(0.24706078, 0.5332544, 0.56973004, 1, 0.49276215, 0.78
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_1rerr"]
 gradient = SubResource("Gradient_u4yt8")
+
+[sub_resource type="LabelSettings" id="LabelSettings_u4yt8"]
+font_size = 80
 
 [node name="menu" type="Node2D"]
 
@@ -26,15 +31,83 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 27.000002
 anchor_bottom = 48.000004
+offset_top = 1535.0
 offset_right = -0.00012207031
 offset_bottom = -0.00012207031
 
-[node name="Button" type="Button" parent="Control/HBoxContainer"]
+[node name="gardenButton" type="Button" parent="Control/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button2" type="Button" parent="Control/HBoxContainer"]
-layout_mode = 2
+[node name="Label" type="Label" parent="Control/HBoxContainer/gardenButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98600006
+anchor_bottom = 1.003
+offset_right = -0.0020141602
+offset_bottom = -0.15499878
+text = "花園"
+label_settings = SubResource("LabelSettings_u4yt8")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 3
 
-[node name="Button3" type="Button" parent="Control/HBoxContainer"]
+[node name="bottleButton" type="Button" parent="Control/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/bottleButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98600006
+anchor_bottom = 1.003
+offset_right = -0.0020141602
+offset_bottom = -0.15499878
+text = "水杯"
+label_settings = SubResource("LabelSettings_u4yt8")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 3
+
+[node name="storeButton" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/storeButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98600006
+anchor_bottom = 1.003
+offset_right = -0.0020141602
+offset_bottom = -0.15499878
+text = "商店"
+label_settings = SubResource("LabelSettings_u4yt8")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 3
+
+[node name="throwButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 1176.0
+offset_right = 795.0
+offset_bottom = 1396.0
+size_flags_horizontal = 3
+script = ExtResource("1_1rerr")
+
+[node name="Label" type="Label" parent="Control/throwButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98600006
+anchor_bottom = 1.003
+offset_right = -0.0020141602
+offset_bottom = -0.15499878
+text = "丟硬幣"
+label_settings = SubResource("LabelSettings_u4yt8")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 3
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
