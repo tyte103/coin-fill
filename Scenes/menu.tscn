@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvipg3hq1ye35"]
+
+[sub_resource type="Gradient" id="Gradient_u4yt8"]
+offsets = PackedFloat32Array(0, 0.84)
+colors = PackedColorArray(0.24706078, 0.5332544, 0.56973004, 1, 0.49276215, 0.7814019, 0.8181892, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1rerr"]
+gradient = SubResource("Gradient_u4yt8")
+
+[node name="menu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 27.000002
+anchor_bottom = 48.000004
+offset_right = -0.00012207031
+offset_bottom = -0.00012207031
+
+[node name="Button" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+texture = SubResource("GradientTexture1D_1rerr")
