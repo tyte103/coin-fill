@@ -11,15 +11,20 @@ var is_frontResult = false
 func _ready():
 	coin = $Coin
 	toss_coin()
+	$CanvasLayer/Button.visible = false
 
 #硬幣投擲
 func toss_coin():
+	$CanvasLayer/Button.visible = false
 	#重置硬幣狀態
+	coin.global_position = Vector3.ZERO
 	coin.linear_velocity = Vector3.ZERO
 	coin.angular_velocity = Vector3.ZERO
 	
 	#重置硬幣位置
+	coin.sleeping = false
 	coin.global_position = Vector3(0, 1.0, 0)
+	
 	is_frontResult = true #結果匯入
 	
 	#向上及旋轉
@@ -31,7 +36,7 @@ func toss_coin():
 	
 	await get_tree().create_timer(min_spin_time).timeout
 	#結果判定
-	if coin.global_position.y <= 1.5:
+	if coin.global_position.y <= 5:
 		finalize_result()
 	
 #顯示結果
@@ -45,3 +50,10 @@ func finalize_result():
 	else:
 		final_rotation = Vector3(deg_to_rad(180), 0, 0)
 	$Coin/MeshInstance3D.rotation = final_rotation
+	$CanvasLayer/Button.visible = true
+
+
+func _on_button_pressed() -> void:
+	toss_coin()
+	
+	
