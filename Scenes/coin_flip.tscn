@@ -7,7 +7,7 @@
 size = Vector2(10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v2jdy"]
-size = Vector3(10, 0.01, 10)
+size = Vector3(10, 0.1, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5lmg"]
 albedo_color = Color(1, 0.84313726, 0, 1)
@@ -44,7 +44,7 @@ text = "Flip!"
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.272521, 23.10085)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.039031, -0.07133758)
+transform = Transform3D(1, 0, 0, 0, 0.7040396, 0.71016085, 0, -0.71016085, 0.7040396, 0.162, 4.254724, 4.1796684)
 
 [node name="GroundMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_a187i")
@@ -53,10 +53,11 @@ metadata/_edit_group_ = true
 [node name="StaticBody3D" type="StaticBody3D" parent="GroundMesh"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GroundMesh/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 shape = SubResource("BoxShape3D_v2jdy")
 
 [node name="Coin" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16742118, 0)
+transform = Transform3D(1, 0, 0, 0, -0.99576646, -0.091918744, 0, 0.091918744, -0.99576646, 0, 0.05142784, 0)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Coin"]
